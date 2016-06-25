@@ -12,18 +12,28 @@
 ![Alt text](https://docs.docker.com/engine/article-img/architecture.svg)
 
 ## Docker's internals
-- Docker images
-  read only template이라고 생각하면된다. 예를 들어 image는 우분투, 아파치와 web app이 설치를 포함하고있을 수있다. image는 container를 만드는데 사용된다.  Docker의 ```build``` component이다.
+**Docker images**
 
-- Docker registries
-  public, private으로 image를 저장하는 공간이다.
-- Docker containers
-  container는 directory랑 비슷하다. application이 실행되기 위한 모든게 담겨있다. Docker의 ```run``` component이다.
+read only template이라고 생각하면된다. 예를 들어 image는 우분투, 아파치와 web app이 설치를 포함하고있을 수있다. image는 container를 만드는데 사용된다.
+```
+docker build
+```
+
+**Docker registries**
+
+public, private으로 image를 저장하는 공간이다.
+
+**Docker containers**
+
+container는 directory랑 비슷하다. application이 실행되기 위한 모든게 담겨있다. 
+```
+docker run
+```
 
 ### Image and container
-[image vs container](http://stackoverflow.com/questions/23735149/docker-image-vs-container)
+![image vs container](http://stackoverflow.com/questions/23735149/docker-image-vs-container)
 
-# Docker Machine
+**Docker Machine**
 
 Docker 자체를 설치하기위해 필요한 도구다. (Docker App이 생기면서 필요없이지게됨) Docker Engine을 virtual hosts에 설치하게 해주는 툴이다.  docker-machine 명령어로 호드트들을 관리하게 해준다.  Machine으로 어떤 머신에든 Docker hosts를 만들수있다.  Machine CLI로 동작하고 관리되고있는 host를 point 하면 docker 명령어를 사용할수있다
 
